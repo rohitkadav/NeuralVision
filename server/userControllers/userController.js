@@ -1,7 +1,6 @@
-import userModel from "../models/userModel";
+import userModel from "../models/userModel.js";
 import bcrypt from 'bcrypt'
-import jwt from 'jsonwebtoken'
-import { use } from "react";
+import jwt from 'jsonwebtoken' 
 
 
 const registerUser = async (req, res) => {
@@ -29,13 +28,13 @@ const registerUser = async (req, res) => {
     }
 }
 
-const loginUser = async ()=>{
+const loginUser = async (req,res)=>{
     try{
         const {email, password} = req.body;
         const user = await userModel.findOne({email})
 
         if(!user) {
-            return res({sucess:false , message : 'User does not exist'})
+            return res.json({sucess:false , message : 'User does not exist'})
         }
 
         const isMatch = await bcrypt.compare(password , user.password)
@@ -45,10 +44,13 @@ const loginUser = async ()=>{
             res.json({sucess : true , token , user : {name: user.name}})
    
         }else {
-           return  res({sucess:false , message : 'Invalid credenetials'});
+           return  res.json({sucess:false , message : 'Invalid credenetials'});
         }
     }catch(e){
         console.log(e);
         res.json({sucess:false , message : e.message})
     }
 }
+
+
+export {registerUser , loginUser};
