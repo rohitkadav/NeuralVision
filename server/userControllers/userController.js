@@ -52,5 +52,16 @@ const loginUser = async (req,res)=>{
     }
 }
 
+const userCredits = async (req, res) => {
+    // console.log(req.user.id);
+    try{
+        const userId= req.user.id
+        const user = await userModel.findById(userId)
+        res.json({sucess: true , credits : user.creditBalance , user : {name : user.name}})
+    }catch(e) {
+        console.log(e);
+        res.json({sucess:false , message : e.message})
+    }
+}
 
-export {registerUser , loginUser};
+export {registerUser , loginUser , userCredits};
