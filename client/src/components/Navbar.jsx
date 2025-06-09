@@ -9,7 +9,7 @@ const Navbar = () => {
     const navigate = useNavigate();
   return (
     <div className='flex items-center justify-between py-4'>
-       <Link to='/'> <img src={assets.Ts_Logo} alt="" className='w-32 sm:w-36 lg:w-48 object-contain'/>
+       <Link to='/'> <img src={assets.Ts_logo} alt="" className='w-32 sm:w-36 lg:w-48 object-contain'/>
        </Link>
        <div>
         {

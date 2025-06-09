@@ -19,7 +19,7 @@ import star_group from './star_group.png'
 import credit_star from './credit_star.svg'
 import profile_icon from './profile_icon.png'
 import person from './person.svg';
-import Ts_Logo from './Ts_Logo.png'
+import Ts_logo from './Ts_logo.png'
 import Footer_TS from './Footer_TS.png';
 import LogoTs from './LogoTs.png'
 
@@ -41,7 +41,7 @@ export const assets = {
     credit_star,
     profile_icon,
     person,
-    Ts_Logo,
+    Ts_logo,
     Footer_TS,
     LogoTs ,
 }
