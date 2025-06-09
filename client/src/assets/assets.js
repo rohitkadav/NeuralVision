@@ -43,7 +43,7 @@ export const assets = {
     person,
     Ts_Logo,
     Footer_TS,
-    LogoTs,
+    LogoTs ,
 }
 
 export const stepsData = [
