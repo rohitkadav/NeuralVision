@@ -21,7 +21,7 @@ import profile_icon from './profile_icon.png'
 import person from './person.svg';
 import Ts_Logo from './Ts_Logo.png'
 import Footer_TS from './Footer_TS.png';
-import logoTs from './logoTs.png'
+import LogoTs from './LogoTs.png'
 
 
 export const assets = {
@@ -43,7 +43,7 @@ export const assets = {
     person,
     Ts_Logo,
     Footer_TS,
-    logoTs,
+    LogoTs,
 }
 
 export const stepsData = [
