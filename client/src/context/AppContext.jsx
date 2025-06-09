@@ -34,7 +34,11 @@ const AppContextProvider= (props)=> {
 
     const generateImage = async (prompt)=> {
         try {
-          const {data}=  await axios.post(backendUrl + 'api/image/generate-Image', {prompt}, {headers: {token}})
+            if (!prompt || prompt.trim() === "") {
+              toast.error("Prompt is required");
+              return;
+               }
+          const {data}=  await axios.post(backendUrl + 'api/image/generate-Image', {prompt}, {headers: {token ,}})
 
             if(data.sucess) {
                 loadCreditsData()

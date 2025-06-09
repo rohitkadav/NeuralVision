@@ -19,6 +19,11 @@ import star_group from './star_group.png'
 import credit_star from './credit_star.svg'
 import profile_icon from './profile_icon.png'
 import person from './person.svg';
+import Ts_Logo from './Ts_Logo.png'
+import Footer_TS from './Footer_TS.png';
+import logoTs from './logoTs.png'
+
+
 export const assets = {
     logo,
     logo_icon,
@@ -35,7 +40,10 @@ export const assets = {
     star_group,
     credit_star,
     profile_icon,
-    person
+    person,
+    Ts_Logo,
+    Footer_TS,
+    logoTs,
 }
 
 export const stepsData = [

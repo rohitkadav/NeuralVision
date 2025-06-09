@@ -9,22 +9,22 @@ const Testimonials = () => {
     whileInView={{opacity:1, y:0}}
     viewport={{once : true}}
     className='flex flex-col items-center justify-center my-20 py-12 '>
-       <h1 className='text-3xl sm:text-4xl font-semibold mb-2  '>Customer Testimonials</h1>
-        <p className='text-gray-500 mb-12 '>What our Users Are Saying</p>
-        <div className='flex flex-wrap gap-6 '>
+       <h1 className='text-3xl sm:text-4xl font-semibold mb-2 text-[#00ff99] '>Customer Testimonials</h1>
+        <p className='text-gray-50 mb-12 '>What our Users Are Saying</p>
+        <div className='flex flex-wrap gap-6 justify-center '>
             {testimonialsData.map((testimonials,index)=>(
-                <div key={index} className='bg-white/20 p-12 rounded-lg shadow-md order w-80 cursor-pointer hover:scale-[1.02] transition-all'>
+                <div key={index} className='bg-white/20 p-12 rounded-lg shadow-md order w-80 cursor-pointer hover:scale-[1.02] transition-all '>
                     <div className='flex flex-col items-center'>
                         <img src={testimonials.image} alt="" className='rounded-full w-14 '/>
                         <h2 className='text-xl font-semibold mt-3'>{testimonials.name}</h2>
-                        <p className='text-gray-500 mb-4 '>{testimonials.role}</p>
+                        <p className='text-gray-100 mb-4 '>{testimonials.role}</p>
                         <div className='flex mb-4 '>
                             {Array(testimonials.stars).fill().map((item,index)=>(
                                 <img key={index} src={assets.rating_star} />
                             ))}
 
                         </div>
-                        <p className='text-center text-sm text-gray-600'>{testimonials.text}</p>
+                        <p className='text-center text-sm text-gray-50'>{testimonials.text}</p>
                     </div>
                 </div>
 

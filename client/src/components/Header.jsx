@@ -31,18 +31,18 @@ const Header = () => {
             <p>Best Text to Image generator</p>
             <img src={assets.star_icon} alt="" />
         </motion.div>
-        <motion.h1 className='text-4xl max-w-[300px] sm:text-7xl sm:max-w-[595px] mx-auto mt-10 text-center'>Turn Text To <span className='text-blue-600'
+        <motion.h1 className='text-4xl max-w-[300px] sm:text-7xl sm:max-w-[595px] mx-auto mt-10 text-center text-white'>Turn Text To <span className='text-[#00ff99]'
         initial={{opacity: 0}}
         animate={{opacity: 1}}
          transition={{delay: 0.4 , duration:2}}
         >Image</span>, in Seconds.</motion.h1>
-        <motion.p className='text-center max-w-xl mx-auto mt-5'
+        <motion.p className='text-center max-w-xl mx-auto mt-5 text-white'
         initial={{opacity:0.2, y:20}} 
         animate={{opacity:1, y:0}}
         transition={{delay: 0.6 , duration:0.8}}
 
         >Unleash your creativity with AI, Turn your imagination into visual art in seconds - just type, and watch the magic happen.</motion.p>
-        <motion.button className='sm:text-lg text-white bg-black w-auto mt-8 px-12 py-2.5 flex items-center gap-2 rounded-full'
+        <motion.button className='sm:text-lg text-black bg-[#00ff99] w-auto mt-8 px-12 py-2.5 flex items-center gap-2 rounded-full'
         whileHover={{scale:1.05}}
         whileTap={{scale:0.95}}
         initial={{opacity:0}} 
@@ -67,7 +67,7 @@ const Header = () => {
         initial={{opacity:0}} 
         animate={{opacity:1}}
         transition={{delay: 1.2 , duration:0.8}}
-        className='mt-2 text-neutral-600 '>Generated images from imagify</motion.p>
+        className='mt-2 text-gray-300'>Generated images from Neural Vision</motion.p>
     </motion.div>
   )
 }

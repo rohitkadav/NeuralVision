@@ -9,17 +9,17 @@ const Navbar = () => {
     const navigate = useNavigate();
   return (
     <div className='flex items-center justify-between py-4'>
-       <Link to='/'> <img src={assets.logo} alt="" className='w-28 sm:w-32 lg:w-40'/>
+       <Link to='/'> <img src={assets.Ts_Logo} alt="" className='w-32 sm:w-36 lg:w-48 object-contain'/>
        </Link>
        <div>
         {
         user ?
          <div className='flex items-center gap-3 sm:gap-3'>
-          <button onClick={()=>navigate('/Buycredit')} className='flex items-center gap-2 bg-blue-100 px-4 sm:px-4 py-1.5 sm:py-3 rounded-full hover:scale-105 transition-all duration-700'>
+          <button onClick={()=>navigate('/Buycredit')} className='flex items-center gap-2 bg-[#1c1c22] px-4 sm:px-4 py-1.5 sm:py-3 rounded-full hover:scale-105 transition-all duration-700 '>
             <img className='w-5' src={assets.credit_star} alt="" />
-            <p className='text-xs sm:text-sm font-medium text-gray-600'>Credits left: {credit}</p>
+            <p className='text-xs sm:text-sm font-medium text-gray-50'>Credits left: {credit}</p>
           </button>
-          <p className='text-gray-600 max-sm:hidden pl-4'>Hi,{user.name} </p>
+          <p className='text-white max-sm:hidden pl-4'>Hi,{user.name} </p>
           <div className='relative group'>
             <img src={assets.profile_icon} className='w-10 drop-shadow' alt="" />
             <div className='absolute hidden group-hover:block top-0 right-0 z-10 text-black rounded pt-12'>
@@ -32,8 +32,8 @@ const Navbar = () => {
          </div>
         :
         <div className='flex items-center gap-2 sm:gap-5'>
-            <p onClick={()=>navigate('/Buycredit')} className='cursor-pointer'>Pricing</p>
-            <button className='bg-zinc-800 text-white px-7 py-2 sm:px-10 text-sm rounded-full' onClick={()=> setShowLogin(true)}>Login</button>
+            <p onClick={()=>navigate('/Buycredit')} className='cursor-pointer text-[#00ff99]'>Pricing</p>
+            <button className='bg-[#00ff99] text-black px-7 py-2 sm:px-10 text-sm rounded-full' onClick={()=> setShowLogin(true)}>Login</button>
         </div>
         }
         
