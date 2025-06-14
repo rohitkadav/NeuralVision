@@ -37,7 +37,7 @@ const Result = () => {
         <img src={image} alt="" className='max-w-sm  rounded ' />
         <span className= {`absolute bottom-0 left-0 h-1 bg-blue-500 ${loading ? 'w-full transition-all  duration-[10s]' : 'w-0'}`}/>
       </div>
-      <p className={!loading ? 'hidden': ''}>Loading....</p>
+      <p className={`text-white ${!loading ? 'hidden': ''}`} > Loading....</p>
     </div>
     {!isImageLoaded &&
     <div className='flex w-full max-w-xl bg-neutral-500 text-white text-sm p-0.5 mt-10 rounded-full'>
@@ -47,8 +47,8 @@ const Result = () => {
   }
 {isImageLoaded && 
     <div className='flex gap-2 flex-wrap justify-center text-white text-sm p-0.5 mt-10 rounded-full'>
-      <p onClick={()=>{setImageLoaded(false)}} className='bg-transparent border-zinc-900 text-black px-8 py-3 rounded-full cursor-pointer'>Generate Another</p>
-      <a href={image} download className='bg-zinc-900 px-10 py-3 rounded-full cursor-pointer'>Download</a>
+      <p onClick={()=>{setImageLoaded(false)}} className='bg-transparent border-white text-[#00ff99] px-8 py-3 rounded-full cursor-pointer'>Generate Another</p>
+      <a href={image} download className='bg-[#00ff99] text-zinc-900 px-10 py-3 rounded-full cursor-pointer'>Download</a>
     </div>
 }
     </motion.form>
